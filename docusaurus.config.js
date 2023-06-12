@@ -67,35 +67,35 @@ const config = {
       },
       footer: {
         style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/tiwater/penless",
-              },
-            ],
-          },
-        ],
+        // links: [
+        //   {
+        //     title: "Docs",
+        //     items: [
+        //       {
+        //         label: "Tutorial",
+        //         to: "/docs/intro",
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: "Community",
+        //     items: [
+        //       {
+        //         label: "Discord",
+        //         href: "https://discordapp.com/invite/docusaurus",
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: "More",
+        //     items: [
+        //       {
+        //         label: "GitHub",
+        //         href: "https://github.com/tiwater/penless",
+        //       },
+        //     ],
+        //   },
+        // ],
         copyright: `Penless.ai © ${new Date().getFullYear()} . Built with Docusaurus.`,
       },
       prism: {
