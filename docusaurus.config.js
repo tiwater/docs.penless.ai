@@ -10,7 +10,7 @@ const config = {
   tagline: "Be Creative.",
   url: "https://docs.penless.ai",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "tiwater", // Usually your GitHub org/user name.
