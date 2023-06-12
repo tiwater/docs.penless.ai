@@ -22,7 +22,8 @@ const config = {
       /** @type {import('docusaurus-preset-openapi').Options} */
       ({
         api: {
-          path: 'https://penless.ai/api/docs',
+          //path: 'https://penless.ai/api/docs',
+          path: "./openapi.json",
           routeBasePath: 'api',
           sidebarCollapsed: false,
         },
