@@ -44,8 +44,11 @@ const config = {
   themeConfig:
     /** @type {import('docusaurus-preset-openapi').ThemeConfig} */
     ({
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
       navbar: {
-        title: "Penless Open Platform",
+        title: "Penless Docs",
         logo: {
           alt: "logo",
           src: "img/logo.png",
@@ -53,11 +56,23 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "design/api",
+            docId: "tutorial-basics/create-a-page",
             position: "left",
-            label: "Design",
+            label: "Basics",
           },
-          { to: "/api", label: "API", position: "left" },
+          {
+            type: "doc",
+            docId: "tutorial-extras/translate-your-site",
+            position: "left",
+            label: "Extras",
+          },
+          {
+            type: "doc",
+            docId: "design/arch",
+            position: "left",
+            label: "Architecture",
+          },
+          { to: "/api", label: "Open API", position: "left" },
           {
             href: "https://github.com/tiwater/penless",
             label: "GitHub",
