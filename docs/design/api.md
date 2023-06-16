@@ -87,10 +87,10 @@ The AI industry is constantly evolving, in contrast to management requirements. 
 
 Based on the AIGC scenario, all the AI-related APIs are for content creation and manipulation. These APIs process certain inputs and output the results as files. The important factors to consider are the source data type, type of pipeline, and target data type. The general paradigm is: compute(source, target), for example:
 
-- `imagine(text, prompt, image)` - from a pure idea to result
+- `imagen(text, prompt, image)` - from a pure idea to result
 - `inspire(question, context as prompt, answer)` - here we can consider context part of prompt
 - `extract(image, prompt, text)` - Understand the input, mostly an image, but can also be a pdf or video content
-- `transform(image, prompt, image)` - Convert the input to another format, such as image to video based on the requirement from the prompt
+- ~~~`transform(image, prompt, image)` - Convert the input to another format, such as image to video based on the requirement from the prompt~~~
 
 Thus, we can unify the APIs as follows:
 
