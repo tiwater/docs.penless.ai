@@ -9,14 +9,14 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("flex flex-col bg-base-200 text-base-content w-full h-80 justify-center items-center py-4 gap-6")}>
-      <div className="text-5xl font-bold">{siteConfig.title}</div>
+      <div className="text-3xl lg:text-5xl font-bold">{siteConfig.title}</div>
       <div className="text-xl">{siteConfig.tagline}</div>
       <div className="">
         <Link
           className="btn btn-outline hover:no-underline btn-lg normal-case bg-primary hover:bg-primary-focus hover:border-primary text-primary-content"
-          to="/docs/design/api"
+          to="/design/api"
         >
-          Quick Start - 5min ⏱️
+          API Design - 5min ⏱️
         </Link>
       </div>
     </header>
@@ -24,10 +24,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const { isDarkTheme, siteConfig } = useDocusaurusContext();
-  useEffect(() => {
-    console.log('isDarkTheme', isDarkTheme);
-  }, [isDarkTheme]);
+  const { siteConfig } = useDocusaurusContext();
 
   return (
     <Layout

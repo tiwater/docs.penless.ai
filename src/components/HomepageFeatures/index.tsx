@@ -50,7 +50,7 @@ export default function HomepageFeatures() {
   return (
     <section className="w-full py-4 px-2">
       <div className="container max-w-7xl ">
-        <div className="flex w-full h-full justify-between items-center">
+        <div className="flex flex-col lg:flex-row w-full h-full justify-between items-center">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

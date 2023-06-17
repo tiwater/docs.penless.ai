@@ -8,6 +8,25 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem; /* height of sticky header */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: hsl(var(--p)); /* https://daisyui.com/docs/colors/ */
@@ -20,6 +39,7 @@
   --ifm-font-color-base: hsl(var(--bc)); /* base-content */
   --ifm-background-color: hsl(var(--b2)); /* primary-content */
   --ifm-navbar-background-color: hsl(var(--b1)); /* primary-content */
+  --ifm-list-paragraph-margin: 0;
 }
 
 
@@ -47,6 +67,38 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   @apply flex items-center;
 }
 
-a {
+.theme-doc-markdown a {
   @apply text-primary;
+}
+
+.theme-doc-markdown ul {
+  @apply pl-4 mb-0;
+}
+
+.theme-doc-markdown li {
+  @apply pl-1 py-2 list-disc leading-relaxed;
+}
+
+.theme-doc-markdown h1 {
+  @apply text-4xl font-bold;
+}
+
+.theme-doc-markdown h2 {
+  @apply text-3xl font-bold;
+}
+
+.theme-doc-markdown h3 {
+  @apply text-2xl font-bold;
+}
+
+.theme-doc-markdown h4 {
+  @apply text-xl font-bold;
+}
+
+.theme-doc-markdown span {
+  @apply p-1;
+}
+
+.theme-doc-markdown p {
+  @apply my-2;
 }
