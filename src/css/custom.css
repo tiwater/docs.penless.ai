@@ -46,3 +46,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 .breadcrumbs__item {
   @apply flex items-center;
 }
+
+a {
+  @apply text-primary;
+}
