@@ -1,35 +1,32 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./styles.module.css";
+import { GiftIcon, MapIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
 const FeatureList = [
   {
-    title: "Easy Experiment",
-    Svg: require("../../../static/img/undraw_docusaurus_mountain.svg").default,
+    title: "Experiment",
+    Svg: SparklesIcon,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Play with a set of easy tools. Define your style.
       </>
     ),
   },
   {
     title: "Compose Workflow",
-    Svg: require("../../../static/img/undraw_docusaurus_tree.svg").default,
+    Svg: MapIcon,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Compose your pipeline as a unique workflow.
       </>
     ),
   },
   {
     title: "Share to Earn",
-    Svg: require("../../../static/img/undraw_docusaurus_react.svg").default,
+    Svg: GiftIcon,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Share your workflow. Get paid when others use it.
       </>
     ),
   },
@@ -37,13 +34,13 @@ const FeatureList = [
 
 function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx("col col--4")}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
+    <div className={clsx("flex flex-col items-center text-primary bg-base-100 py-8")}>
+      <div className="gap-3">
+        <Svg className="w-16 h-16 m-4" alt={title} />
       </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <div className="flex flex-col gap-4 text-center">
+        <div className="text-xl font-bold">{title}</div>
+        <div className="text-base-content">{description}</div>
       </div>
     </div>
   );
@@ -51,9 +48,9 @@ function Feature({ Svg, title, description }) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
+    <section className="w-full py-4 px-2">
+      <div className="container max-w-7xl ">
+        <div className="flex w-full h-full justify-between items-center">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Penless Docs",
+  title: "Penless Open Platform",
   tagline: "Be Creative.",
   url: "https://docs.penless.ai",
   baseUrl: "/",
@@ -42,10 +42,26 @@ const config = {
     ],
   ],
 
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
+
   themeConfig:
     /** @type {import('docusaurus-preset-openapi').ThemeConfig} */
     ({
       colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true, // Always follow the system preference
         respectPrefersColorScheme: true,
       },
       navbar: {
@@ -75,8 +91,8 @@ const config = {
           },
           { to: "/api", label: "Open API", position: "left" },
           {
-            href: "https://github.com/tiwater/penless",
-            label: "GitHub",
+            to: "https://penless.ai",
+            label: "Penless.ai",
             position: "right",
           },
         ],
@@ -112,7 +128,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Penless.ai © ${new Date().getFullYear()} . Built with Docusaurus.`,
+        copyright: `Penless.ai © ${new Date().getFullYear()} ❤️ Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
