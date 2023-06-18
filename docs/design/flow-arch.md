@@ -1,4 +1,4 @@
-# Architectural Design of Penless Flow
+# Flow Architecture
 
 [中文版](./flow-arch-zh.md)
 
