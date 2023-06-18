@@ -1,7 +1,5 @@
 # Flow Architecture
 
-[中文版](./flow-arch-zh.md)
-
 Welcome to the world of Penless Flow, a visual programming tool that simplifies the process of creating a flow by using drag-and-drop nodes and connecting them with edges. In this article, we will give you an overview of the architecture design that was used to build this incredible project.
 
 ## Overview

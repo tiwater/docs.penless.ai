@@ -1,7 +1,5 @@
 # System Architecture
 
-This document has other languges: [中文版](./arch-zh.md).
-
 App level design documents include [Architecture Design of Penless Flow](./flow-arch.md). More will be added later.
 
 ## Overview

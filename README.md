@@ -2,7 +2,7 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-To serve OpenAPI docs, we use plugin `docusaurus-preset-openapi`. Please read [docs](https://www.npmjs.com/package/docusaurus-preset-openapi#Configuration) for configuration details.
+To serve OpenAPI docs, we use `redocusaurus`. Please read [docs](https://redocusaurus.vercel.app/) for configuration details.
 
 ### Installation
 

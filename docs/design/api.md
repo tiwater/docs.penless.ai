@@ -1,7 +1,5 @@
 # API Design Principles
 
-[中文版](./api-zh.md)
-
 ## Overview
 
 ### Background

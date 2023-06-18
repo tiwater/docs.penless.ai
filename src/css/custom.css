@@ -4,25 +4,6 @@
  * work well for content-centric websites.
  */
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  scroll-behavior: smooth;
-  scroll-padding-top: 4.5rem; /* height of sticky header */
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 /* You can override the default Infima variables here. */
 /* daistyui: winter */
 :root {
@@ -81,9 +62,3 @@ html[data-theme="dark"] {
 html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
-
-.footer--dark {
-  background-color: hsl(var(--b2));
-  color: hsl(var(--fc));
-}
-

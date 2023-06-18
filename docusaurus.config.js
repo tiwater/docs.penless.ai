@@ -1,6 +1,3 @@
-// @ts-nocheck
-// Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
@@ -15,35 +12,49 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "tiwater", // Usually your GitHub org/user name.
   projectName: "penless", // Usually your repo name.
+  themes: ["docusaurus-theme-redoc"],
 
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh'],
+  },
   presets: [
     [
-      "docusaurus-preset-openapi",
-      /** @type {import('docusaurus-preset-openapi').Options} */
+      '@docusaurus/preset-classic',
       ({
-        api: {
-          //path: 'https://penless.ai/api/docs',
-          path: "./openapi.json",
-          routeBasePath: 'api',
-          sidebarCollapsed: false,
-        },
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: '/',
-          // Please change this to your repo.
-          // editUrl:
-          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
-        blog: false,
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
         },
       }),
     ],
+    [
+      'redocusaurus',
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            spec: 'https://penless.ai/api/docs',
+            route: '/api/',
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          primaryColor: "hsl(212 100% 51%)",
+          primaryColorDark: "hsl(198 93% 60%)",
+          options: {
+            // hideDownloadButton: true,
+          }
+        },
+      },
+    ],
   ],
 
   themeConfig:
-    /** @type {import('docusaurus-preset-openapi').ThemeConfig} */
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
         defaultMode: 'dark',
@@ -51,7 +62,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "Penless Docs",
+        title: "Penless Open Platform",
         logo: {
           alt: "logo",
           src: "img/logo.png",
@@ -62,54 +73,25 @@ const config = {
             type: "doc",
             docId: "design/arch",
             position: "left",
-            label: "Architecture",
+            label: "Design",
           },
-          { to: "/api", label: "Open API", position: "left" },
-          {
-            type: "doc",
-            docId: "docusaurus/tutorial-basics/markdown-features",
-            position: "right",
-            label: "How to Contribute",
-          },
+          { to: "/api", label: "API", position: "left" },
           {
             to: "https://penless.ai",
             label: "Penless.ai",
             position: "right",
           },
+          {
+            type: "doc",
+            docId: "docusaurus/tutorial-basics/markdown-features",
+            position: "right",
+            label: "Documentor",
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
         ],
-      },
-      footer: {
-        style: "dark",
-        // links: [
-        //   {
-        //     title: "Docs",
-        //     items: [
-        //       {
-        //         label: "Tutorial",
-        //         to: "/docs/intro",
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: "Community",
-        //     items: [
-        //       {
-        //         label: "Discord",
-        //         href: "https://discordapp.com/invite/docusaurus",
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: "More",
-        //     items: [
-        //       {
-        //         label: "GitHub",
-        //         href: "https://github.com/tiwater/penless",
-        //       },
-        //     ],
-        //   },
-        // ],
-        copyright: `Penless.ai © ${new Date().getFullYear()} ❤️ Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

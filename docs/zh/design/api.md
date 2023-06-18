@@ -1,7 +1,5 @@
 # API 设计原则
 
-[English Version](./api.md)
-
 ## 概述
 
 ### 背景
