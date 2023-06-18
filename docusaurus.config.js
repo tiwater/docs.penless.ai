@@ -60,23 +60,17 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "tutorial-basics/create-a-page",
-            position: "left",
-            label: "Basics",
-          },
-          {
-            type: "doc",
-            docId: "tutorial-extras/translate-your-site",
-            position: "left",
-            label: "Extras",
-          },
-          {
-            type: "doc",
             docId: "design/arch",
             position: "left",
             label: "Architecture",
           },
           { to: "/api", label: "Open API", position: "left" },
+          {
+            type: "doc",
+            docId: "docusaurus/tutorial-basics/markdown-features",
+            position: "right",
+            label: "How to Contribute",
+          },
           {
             to: "https://penless.ai",
             label: "Penless.ai",
