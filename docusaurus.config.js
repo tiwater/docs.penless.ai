@@ -36,32 +36,18 @@ const config = {
         },
         blog: false,
         theme: {
-          customCss: [require.resolve("./src/css/custom.css")/*, require.resolve("./src/css/github-markdown.css")*/],
+          customCss: [require.resolve("./src/css/custom.css")],
         },
       }),
     ],
   ],
-
-  // plugins: [
-  //   async function myPlugin(context, options) {
-  //     return {
-  //       name: "docusaurus-tailwindcss",
-  //       configurePostCss(postcssOptions) {
-  //         // Appends TailwindCSS and AutoPrefixer.
-  //         postcssOptions.plugins.push(require("tailwindcss"));
-  //         postcssOptions.plugins.push(require("autoprefixer"));
-  //         return postcssOptions;
-  //       },
-  //     };
-  //   },
-  // ],
 
   themeConfig:
     /** @type {import('docusaurus-preset-openapi').ThemeConfig} */
     ({
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: true, // Always follow the system preference
+        disableSwitch: false, // Always follow the system preference
         respectPrefersColorScheme: true,
       },
       navbar: {
@@ -69,6 +55,7 @@ const config = {
         logo: {
           alt: "logo",
           src: "img/logo.png",
+          srcDark: "img/logo-white.png",
         },
         items: [
           {

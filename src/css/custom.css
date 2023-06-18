@@ -4,10 +4,6 @@
  * work well for content-centric websites.
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html,
 body {
   padding: 0;
@@ -28,20 +24,52 @@ a {
 }
 
 /* You can override the default Infima variables here. */
+/* daistyui: winter */
 :root {
+  --pf: 212 100% 44%;
+  --sf: 247 47% 36%;
+  --p: 212 100% 51%;
+  --p-night: 198 93% 60%;
+  --s: 247 47% 43%;
+  --s-night: 234 89% 74%;
+  --b1: 0 0% 100%;
+  --b2: 217 100% 97%;
+  --b3: 219 44% 92%;
+  --bc: 214 30% 32%;
+  --bc-night: 229 7% 80%;
+  --pc: 231 100% 93%;
+  --sc: 256 40% 88%;
   --ifm-color-primary: hsl(var(--p)); /* https://daisyui.com/docs/colors/ */
-  --ifm-color-primary-dark: hsl(var(--pf)); /* primary-focus */
+  --ifm-color-primary-dark: hsl(var(--p-night)); /* primary-focus */
   --ifm-color-primary-light: hsl(var(--pf));
   --ifm-color-secondary: hsl(var(--s));
-  --ifm-color-secondary-dark: hsl(var(--sf)); /* secondary-focus */
+  --ifm-color-secondary-dark: hsl(var(--s-night)); /* secondary-focus */
   --ifm-color-secondary-light: hsl(var(--sf));
   --ifm-code-font-size: 95%;
-  --ifm-font-color-base: hsl(var(--bc)); /* base-content */
-  --ifm-background-color: hsl(var(--b2)); /* primary-content */
-  --ifm-navbar-background-color: hsl(var(--b1)); /* primary-content */
   --ifm-list-paragraph-margin: 0;
 }
 
+/* daistyui: night */
+html[data-theme="dark"] {
+  --pf: 198 93% 53%;
+  --sf: 234 89% 67%;
+  --p: 198 93% 60%;
+  --s: 234 89% 74%;
+  --b1: 222 47% 11%;
+  --b2: 222 47% 4%;
+  --b3: 0 0% 0%;
+  --bc: 229 7% 80%;
+  --pc: 202 34% 14%;
+  --sc: 239 22% 15%;
+  --ifm-color-primary: hsl(var(--p));
+  --ifm-color-primary-dark: hsl(var(--pf)); 
+  --ifm-color-primary-light: hsl(var(--pf));
+  --ifm-color-secondary: hsl(var(--s));
+  --ifm-color-secondary-dark: hsl(var(--sf)); 
+  --ifm-color-secondary-light: hsl(var(--sf));
+  --ifm-code-font-size: 95%;
+  --ifm-list-paragraph-margin: 0;
+}
 
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
@@ -59,46 +87,3 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   color: hsl(var(--fc));
 }
 
-.breadcrumbs {
-  @apply flex flex-wrap items-center;
-}
-
-.breadcrumbs__item {
-  @apply flex items-center;
-}
-
-.theme-doc-markdown a {
-  @apply text-primary;
-}
-
-.theme-doc-markdown ul {
-  @apply pl-4 mb-0;
-}
-
-.theme-doc-markdown li {
-  @apply pl-1 py-2 list-disc leading-relaxed;
-}
-
-.theme-doc-markdown h1 {
-  @apply text-4xl font-bold;
-}
-
-.theme-doc-markdown h2 {
-  @apply text-3xl font-bold;
-}
-
-.theme-doc-markdown h3 {
-  @apply text-2xl font-bold;
-}
-
-.theme-doc-markdown h4 {
-  @apply text-xl font-bold;
-}
-
-.theme-doc-markdown span {
-  @apply p-1;
-}
-
-.theme-doc-markdown p {
-  @apply my-2;
-}

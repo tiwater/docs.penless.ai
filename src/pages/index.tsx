@@ -5,38 +5,37 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import HomepageFeatures from "../components/HomepageFeatures";
 
+import styles from './index.module.css';
+
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx("flex flex-col bg-base-200 text-base-content w-full h-80 justify-center items-center py-4 gap-6")}>
-      <div className="text-3xl lg:text-5xl font-bold">{siteConfig.title}</div>
-      <div className="text-xl">{siteConfig.tagline}</div>
-      <div className="">
-        <Link
-          className="btn btn-outline hover:no-underline btn-lg normal-case bg-primary hover:bg-primary-focus hover:border-primary text-primary-content"
-          to="/design/api"
-        >
-          API Design - 5min ⏱️
-        </Link>
+    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <div className="container">
+        <h1 className="hero__title">{siteConfig.title}</h1>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/design/arch">
+            Architecture Design
+          </Link>
+        </div>
       </div>
     </header>
   );
 }
 
-export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
-
+export default function Home(): JSX.Element {
+  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <div className="flex flex-col w-full min-h-full justify-center items-center bg-base-200">
-        <HomepageHeader />
-        <main className="w-full h-full bg-base-100">
-          <HomepageFeatures />
-        </main>
-      </div>
+      title={`Hello from ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />">
+      <HomepageHeader />
+      <main>
+        <HomepageFeatures />
+      </main>
     </Layout>
   );
 }

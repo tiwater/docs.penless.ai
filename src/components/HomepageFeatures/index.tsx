@@ -1,8 +1,15 @@
 import React from "react";
 import clsx from "clsx";
 import { GiftIcon, MapIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import styles from './styles.module.css';
 
-const FeatureList = [
+type FeatureItem = {
+  title: string;
+  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  description: JSX.Element;
+};
+
+const FeatureList: FeatureItem[] = [
   {
     title: "Experiment",
     Svg: SparklesIcon,
@@ -31,26 +38,25 @@ const FeatureList = [
     ),
   },
 ];
-
-function Feature({ Svg, title, description }) {
+function Feature({title, Svg, description}: FeatureItem) {
   return (
-    <div className={clsx("flex flex-col items-center text-primary bg-base-100 py-8")}>
-      <div className="gap-3">
-        <Svg className="w-16 h-16 m-4" alt={title} />
+    <div className={clsx('col col--4')}>
+      <div className="text--center">
+        <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="flex flex-col gap-4 text-center">
-        <div className="text-xl font-bold">{title}</div>
-        <div className="text-base-content">{description}</div>
+      <div className="text--center padding-horiz--md">
+        <h3>{title}</h3>
+        <p>{description}</p>
       </div>
     </div>
   );
 }
 
-export default function HomepageFeatures() {
+export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className="w-full py-4 px-2">
-      <div className="container max-w-7xl ">
-        <div className="flex flex-col lg:flex-row w-full h-full justify-between items-center">
+    <section className={styles.features}>
+      <div className="container">
+        <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
