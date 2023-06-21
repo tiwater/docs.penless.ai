@@ -62,3 +62,11 @@ html[data-theme="dark"] {
 html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/* The tag on the left side of method names */
+.redocusaurus .operation-type {
+  padding: 6px 0;
+  height: 24px;
+  margin-top: auto!important;
+  margin-bottom: auto;
+}
